@@ -65,10 +65,14 @@ int check_tile(tile* board, int width, int height, int x, int y)
 		return board[index].neighbor_mines;
 	}
 
+	check_tile(board, width, height, x - 1, y - 1);
 	check_tile(board, width, height, x, y - 1);
+	check_tile(board, width, height, x + 1, y - 1);
 	check_tile(board, width, height, x - 1, y);
 	check_tile(board, width, height, x + 1, y);
+	check_tile(board, width, height, x - 1, y + 1);
 	check_tile(board, width, height, x, y + 1);
+	check_tile(board, width, height, x + 1, y + 1);
 
 	return 0;
 }

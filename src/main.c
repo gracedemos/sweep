@@ -64,7 +64,7 @@ void draw_board(tile* board, int width, int height, int c_x, int c_y)
 
 void print_win(void)
 {
-	const char* msg = "Win ^_^";
+	const char* msg = " Win ^_^ ";
 	int x, y;
 	getmaxyx(stdscr, y, x);
 	y /= 2;
@@ -76,7 +76,7 @@ void print_win(void)
 
 void print_loss(void)
 {
-	const char* msg = "Loss -_-";
+	const char* msg = " Loss -_- ";
 	int x, y;
 	getmaxyx(stdscr, y, x);
 	y /= 2;
