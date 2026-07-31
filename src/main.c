@@ -8,13 +8,13 @@ void draw_board(tile* board, int width, int height, int c_x, int c_y)
 	getmaxyx(stdscr, y1, x1);
 	y1 = y1 / 2 - height / 2 - 1;
 	x1 = x1 / 2 - width - 1;
-	mvwprintw(stdscr, y1, x1, "-");
+	mvwprintw(stdscr, y1, x1, "_");
 	for (int i = 1; i < width * 2 + 1; i++)
-		printw("-");
+		printw("_");
 	y1 += height + 1;
-	mvwprintw(stdscr, y1, x1, "-");
+	mvwprintw(stdscr, y1, x1, "*");
 	for (int i = 1; i < width * 2 + 1; i++)
-		printw("-");
+		printw("*");
 
 	for (int y = 0; y < height; y++) {
 		getmaxyx(stdscr, y1, x1);
